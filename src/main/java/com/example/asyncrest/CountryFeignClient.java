@@ -13,8 +13,8 @@ public interface CountryFeignClient {
 
 //https://restcountries.com/v3.1/region/europe
     @GetMapping(value = "region/{europe}?fields=name", consumes = MediaType.APPLICATION_JSON_VALUE ,produces = MediaType.APPLICATION_JSON_VALUE)
-    List<Country> getCountriesByRegion(@PathVariable String europe);
+    List<Country> getCountriesByRegion(@PathVariable(name="europe") String europe);
 
     @GetMapping(value ="lang/{fr}?fields=name", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    List<Country> getCountriesByLanguage(@PathVariable String fr);
+    List<Country> getCountriesByLanguage(@PathVariable(name="fr") String fr);
 }

@@ -22,7 +22,7 @@ public class AsyncService {
         this.countryClient = countryClient;
     }
 
-
+    @Async
     public List<String> getAllEuropeanFrenchSpeakingCountries() {
         log.info("getAllEuropeanFrenchSpeakingCountries() method called");
 

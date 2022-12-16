@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("async")
 public class AsyncController {
 
-    private AsyncService service;
+    private final AsyncService service;
 
     @Autowired
     public AsyncController(AsyncService service) {
